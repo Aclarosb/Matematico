@@ -1,1 +1,38 @@
-Este es el 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p>Con el fin de delegar</p>
+    <p>introduce un precio recompensa</p>
+    <input type="number" id="numero" placeholder="Introduce un número">
+    <button id="enviar">Enviar</button>
+    <p id="mensaje" style="color: rgb(11, 116, 34);"></p>
+    <div id="boton-container"></div>
+    
+
+    <script>
+        document.getElementById('enviar').addEventListener('click', function() {
+            const numero = parseFloat(document.getElementById('numero').value);
+            const mensaje = document.getElementById('mensaje');
+            const botonContainer = document.getElementById('boton-container');
+            botonContainer.innerHTML = ''; // Limpiar el contenedor del botón
+    
+            if (numero > 2) {
+                mensaje.textContent = "Número incorrecto";
+            } else {
+                mensaje.textContent = "Número correcto";
+                const botonRedirigir = document.createElement('button');
+                botonRedirigir.textContent = 'Siguiente';
+                botonRedirigir.addEventListener('click', function() {
+                    window.location.href = '../Number 5/index.html';
+                });
+                botonContainer.appendChild(botonRedirigir);
+            }
+        });
+    </script>
+</html>

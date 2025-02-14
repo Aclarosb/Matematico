@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p>Enhorabuena</p>
+    <p>fue un exito</p>
+    <p>Ha funcionado</p>
+    <p>Sin embargo</p>
+    <p>te robaron el merito</p>
+    <p id="caritas"></p>
+
+    <script>
+        const caritas = document.getElementById('caritas');
+        let textoCaritas = '';
+        for (let i = 0; i < 100000; i++) { // Puedes ajustar el número de repeticiones según sea necesario
+            textoCaritas += ':( :) ';
+        }
+        caritas.textContent = textoCaritas;
+    </script>
+</body>
+</html>
